@@ -1,0 +1,33 @@
+/* Light mode styles */
+body {
+    background-color: azure;
+    color: rgb(50, 50, 50);
+}
+
+header {
+    background-color: azure;
+    padding: 20px;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: rgb(40, 40, 40);
+    color: azure;
+}
+
+header.dark-mode {
+    background-color: rgb(50, 50, 50);
+    color: azure;
+}
+
+button.dark-mode {
+    background-color: rgb(181, 181, 181);
+    color: black;
+}

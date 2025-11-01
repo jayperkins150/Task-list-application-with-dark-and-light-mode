@@ -44,7 +44,7 @@ function displayTasks() {
     taskList.innerHTML = ""; //Clear the current tasks list
     tasks.forEach((tasks, index) => {
         const li = document.createElement("li"); //Create a list item for each task
-        li.textContent = task; //Set the text of the list item to the task
+        li.textContent = tasks; //Set the text of the list item to the task
         const removeButton = document.createElement("button"); //Create remove item button
         removeButton.textContent = "Remove"; //Set the text of the remove item button
         removeButton.onClick = () => removeTask(index); //Set the onClick event to remove a task

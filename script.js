@@ -22,11 +22,18 @@ function displayTasks() {
         li.textContent = task; // Add the text input to the task item
         const removeButton = document.createElement("button"); // Create remove item button
         removeButton.textContent = "Remove item"; // Set text content for remove item button
-        removeButton.onclick = () => removeTask(index); // Set the onClick event to remove a task
+        removeButton.addEventListener("click", () => removeTask(index)); // Set the onClick event to remove a task
         li.appendChild(removeButton); // Add the remove button to the list item
         taskList.appendChild(li); // Add the list item to the task list
     });
 }
+
+// Add event listener to add task on Enter when task input field is populated
+document.getElementById("taskInput").addEventListener("keydown", (event) => {
+    if (event.key === "Enter" && event.target.value.trim() !== "") {
+        addTask();
+    } 
+});
 
 // Function to remove tasks
 function removeTask(index) {

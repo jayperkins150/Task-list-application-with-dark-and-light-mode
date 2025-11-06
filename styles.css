@@ -1,33 +1,79 @@
+* {
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
 /* Light mode styles */
 body {
-    background-color: azure;
-    color: rgb(50, 50, 50);
+  background-color: azure;
+  color: rgb(50, 50, 50);
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
 }
 
-header {
-    background-color: azure;
-    padding: 20px;
-    text-align: center;
-}
-
+/* Light mode buttons */
 button {
-    padding: 10px 20px;
-    margin-top: 10px;
-    cursor: pointer;
+  background-color: rgb(181, 181, 181);
+  color: black;
+  border: none;
+  border-radius: 50px;          /* Rounded pill shape */
+  padding: 10px 24px;
+  margin: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: 
+    background-color 0.3s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+button:hover {
+  background-color: rgb(160, 160, 160);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: none;
 }
 
 /* Dark mode styles */
 body.dark-mode {
-    background-color: rgb(40, 40, 40);
-    color: azure;
+  background-color: rgb(40, 40, 40);
+  color: azure;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
 }
 
-header.dark-mode {
-    background-color: rgb(50, 50, 50);
-    color: azure;
-}
-
+/* Dark mode buttons */
 button.dark-mode {
-    background-color: rgb(181, 181, 181);
-    color: black;
+  background-color: rgb(181, 181, 181);
+  color: black;
+  border-radius: 50px;
+  margin: 30px;
+  transition: 
+    background-color 0.3s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+button.dark-mode:hover {
+  background-color: rgb(200, 200, 200);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.15);
+}
+
+button.dark-mode:active {
+  transform: translateY(0);
+  box-shadow: none;
 }
